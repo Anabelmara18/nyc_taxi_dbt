@@ -1,21 +1,15 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: trip_source
+    database: trip_data
+    schema: trip_source
+    tables:
+      - name: raw
+      - name: bronze
+      - name: silver
+      - name: gold
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+models: []
+
