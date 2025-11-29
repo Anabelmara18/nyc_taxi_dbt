@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+  - name: trip_source
+    database: trip_data
+    schema: trip_source
+    tables:
+      - name: raw
+      - name: bronze
+      - name: silver
+      - name: gold
+
+models: []
+
